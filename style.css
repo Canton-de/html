@@ -1,0 +1,239 @@
+*{
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+.site-wrapper{
+    width: 100%;
+    display:flex;
+}
+.bg{
+    position: relative;
+    height: 100vh;
+    width: 50%;
+    background: url('img/bg.jpg') no-repeat;
+    background-size: 100% 100vh ;
+}
+.bg__logo{
+    position: absolute;
+    top:80px;
+    left:80px;
+    width: 150px;
+}
+body{
+    display:flex;
+    justify-content: space-between;
+}
+.form{
+    width: 40%;
+    margin: 20px auto 0;
+}
+
+.container{
+    width: 100%;
+}
+.title{
+    font-size: x-large;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.subtitle{
+    font-size: 20px;
+    margin-bottom: 60px;
+    color: rgba(0,0,0,.5)
+}
+.form__register-block{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.form__wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.facebook-link,.linkedin-link{
+    font-weight: 500;
+    position: relative;
+    display: block;
+    width: 45%;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+}
+.facebook-link{
+    background: #255A9B;  
+}
+.linkedin-link{
+    background: #0076B6;
+}
+.facebook-link::after,.linkedin-link::after{
+    left: 15px;
+    top: 10px;
+    content: '';
+    position: absolute;
+    height:100%;
+    width: 20px;
+}
+.facebook-link::after{
+    background: url('img/facebook.svg') no-repeat ;
+}
+.linkedin-link::after{
+    background: url('img/linkedin.svg') no-repeat;
+    background-size: contain;
+}
+
+.form__user-contacts{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.form__email-wrapper,.form__number-wrapper{
+    width:45%;
+    position: relative;
+}
+.email-input,.number-input{
+    box-sizing: border-box;
+    border: .5px solid rgba(0,0,0,.2);
+    padding: 22px 0px 5px 8px;
+    font-weight: 500;
+    width: 100%;
+    line-height: 40px;
+    font-size: 16px;
+    color:black;
+    text-decoration: none;
+    transition: border 1s ease;
+}
+
+
+.email-input:focus,.number-input:focus{
+    border-left: .5px solid blue;
+    outline: none;
+}
+.email-label,.number-label{
+    position: absolute;
+    color:lightgray;
+    top:4px;
+    left:10px;
+}
+
+.form__or{
+    font-size: 14px;
+    align-self: center;
+    position: relative;
+    margin-bottom: 60px;
+}
+.form__or::before,.form__or::after{
+    content:'';
+    width: 10vw;
+    position: absolute;
+    display: block;
+    border-top: .5px solid rgba(0,0,0,.2);
+}
+.form__or::before{
+    left: -13vw;
+    top: 50%;
+}
+.form__or::after{
+    right: -13vw;
+    top: 50%
+}
+
+
+
+.info-icon{
+    color:grey;
+    margin: 0 10px;
+}
+
+.form__investor-type-wrapper{
+    position: relative;
+    margin-right:50px;
+    display: inline-block;
+}
+.form__investor-type-label{
+    font-weight: 700;
+}
+.form__investor-type-info{
+    background: white;
+    padding: 10px;
+    overflow-y: hidden;
+    position: absolute;
+    z-index: 10;
+    top:40px;
+    width: 200%;
+    max-height:50px;
+    color: #808080;
+    border-radius:5px;
+    box-shadow: 0 0 10px  rgba(128,128,128,.5) ;
+    visibility: hidden;
+}
+.info-icon:hover+.form__investor-type-info{
+    visibility: visible;
+}
+
+.form__inputs-title{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom:10px;
+}
+.form__inputs-subtitle{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom:10px;
+    color:gray;
+}
+.form__confirm-wrapper{
+    margin:50px 0;
+}
+.form__create-button{
+    height:40px;
+    width:45%;
+    background: #3698FB;
+    border:none;
+    border-radius:4px;
+    cursor: pointer;
+    color:white;
+}
+.form__confirm-label{
+    color:gray;
+}
+@media(max-width:1250px){
+    .form__create-button-wrapper{
+        width:70%;
+        margin: 0 auto;
+        
+    }
+    .form__create-button{
+        width:100%;
+    }
+    .register-button{
+        width:70%;
+        margin-bottom:10px;
+    }
+    .form__register-block{
+        flex-direction: column;
+        align-items: center;
+    }
+    .subtitle,.form__register-block,.form__or,.form__user-contacts{
+        margin-bottom:30px;
+    }
+}
+
+@media(max-width:850px){
+    .site-wrapper{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bg{
+        width:100%;
+    }
+    .form{
+        width:80%;
+    }
+}
